@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Test Template</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+        .nav-item {
+            margin: 0 10px;
+        }
+        .content-section {
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+        .device-test {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header text-center">
+        <div class="container">
+            <h1>Responsive Design Test</h1>
+            <p class="lead">Resize your browser to see the responsive layout in action</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-4">
+        <div class="row">
+            <!-- Main Content Area -->
+            <div class="col-lg-8">
+                <section class="content-section">
+                    <h2>Responsive Layout Test</h2>
+                    <p>This template uses Bootstrap's grid system to create a responsive layout that adapts to different screen sizes.</p>
+                    
+                    <div class="device-test d-block d-sm-none bg-danger text-white p-2 text-center">
+                        XS - Extra Small Devices (Phones, less than 576px)
+                    </div>
+                    <div class="device-test d-none d-sm-block d-md-none bg-warning p-2 text-center">
+                        SM - Small Devices (Tablets, 576px and up)
+                    </div>
+                    <div class="device-test d-none d-md-block d-lg-none bg-info p-2 text-center">
+                        MD - Medium Devices (Tablets/Laptops, 768px and up)
+                    </div>
+                    <div class="device-test d-none d-lg-block d-xl-none bg-primary text-white p-2 text-center">
+                        LG - Large Devices (Laptops/Desktops, 992px and up)
+                    </div>
+                    <div class="device-test d-none d-xl-block d-xxl-none bg-success text-white p-2 text-center">
+                        XL - Extra Large Devices (Large Desktops, 1200px and up)
+                    </div>
+                    <div class="device-test d-none d-xxl-block bg-dark text-white p-2 text-center">
+                        XXL - Extra Extra Large Devices (1400px and up)
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <aside class="content-section">
+                    <h3>Sidebar</h3>
+                    <p>This sidebar will stack below the main content on mobile devices.</p>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action">Link One</a>
+                        <a href="#" class="list-group-item list-group-item-action">Link Two</a>
+                        <a href="#" class="list-group-item list-group-item-action">Link Three</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+        
+        <!-- Responsive Grid Test -->
+        <section class="content-section mt-4">
+            <h2>Grid System Test</h2>
+            <div class="row text-center">
+                <div class="col-md-4 mb-3">
+                    <div class="p-3 bg-primary text-white rounded">Column 1</div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="p-3 bg-success text-white rounded">Column 2</div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="p-3 bg-info text-white rounded">Column 3</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p>&copy; 2023 Responsive Design Test. All rights reserved.</p>
+            <p>Current viewport width: <span id="viewport-width" class="fw-bold"></span>px</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Viewport width display -->
+    <script>
+        function displayViewportWidth() {
+            document.getElementById('viewport-width').textContent = window.innerWidth;
+        }
+        
+        // Display on load and on resize
+        window.addEventListener('load', displayViewportWidth);
+        window.addEventListener('resize', displayViewportWidth);
+    </script>
+</body>
+</html>
